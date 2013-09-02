@@ -14,6 +14,9 @@ RUN add-apt-repository ppa:rethinkdb/ppa
 RUN apt-get update
 RUN apt-get install -y rethinkdb
 
+# Instal Chateau
+#RUN npm install -g chateau
+
 # Rethinkdb process
 EXPOSE 28015
 # Rethinkdb admin console
@@ -22,6 +25,6 @@ EXPOSE 8080
 # Create the /rethinkdb_data dir structure
 RUN /usr/bin/rethinkdb create
 
-ENTRYPOINT ["/usr/bin/rethinkdb"]
+#ENTRYPOINT ["/usr/bin/rethinkdb"]
 
 CMD ["--help"]
