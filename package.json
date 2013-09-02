@@ -1,6 +1,11 @@
 {
-  "name": "angualrjs-seed",
-  "description": "A starter project for angular js",
+  "name": "cortext-data-book-browncoats",
+  "description": "A restricted access Data Book about Browncoats",
+  "dependencies": {
+    "express": ">= 3.3.4",
+    "jade": ">= 0.35.0",
+    "rethinkdb": ">= 1.8.0-0"
+  },
   "devDependencies": {
         "phantomjs" : "*",
         "karma" : "*",
