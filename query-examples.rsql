@@ -1,0 +1,5 @@
+#list all AoC forging groups
+r.db('BDH').table('Keywords')
+  .filter({game_id: '8de477df-b8a8-4e0f-afab-58f251db6939', key: 'forge_group'})
+  .withFields({value: true})
+  
