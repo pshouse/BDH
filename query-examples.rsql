@@ -3,3 +3,12 @@ r.db('BDH').table('Keywords')
   .filter({game_id: '8de477df-b8a8-4e0f-afab-58f251db6939', key: 'forge_group'})
   .withFields({value: true})
   
+r.db('BDH').table('Games').filter({abbreviation: 'AoC'})
+  .withFields({id: true}).eqJoin('id',r.db('BDH').table('Keywords'),{index: 'game_id'}).zip()
+  .filter({key: 'forge_group'})
+  .withFields({value: true})
+  
+# list all Game abbreviations (in ascending order)
+r.db('BDH').table('Games').withFields({abbreviation: true}).orderBy('abbreviation')
+
+  
