@@ -12,3 +12,7 @@ r.db('BDH').table('Games').filter({abbreviation: 'AoC'})
 r.db('BDH').table('Games').withFields({abbreviation: true}).orderBy('abbreviation')
 
   
+# list all AoC item names (in asscending order)
+r.db('BDH').table('Games').filter({abbreviation: 'AoC'})
+  .withFields({id: true}).eqJoin('id',r.db('BDH').table('Items'),{index: 'game_id'}).zip()
+  .withFields({name: true}).orderBy('name')
