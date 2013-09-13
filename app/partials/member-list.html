@@ -1,0 +1,21 @@
+<p>Crew Roster</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <!--<th><input type="checkbox" ng-model="toggle" ng-click="toggleSelectAll()" /> Action</th>-->
+            <th>Name</th>
+            <th>Call Word</th>
+            <th class="hidden">ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="member in members">
+            <!--<td><input type="checkbox" ng-model="member.Checked" /></td>-->
+            <td><a href="/members/{{member.id}}">{{ member.name}}</a></td>
+            <td>{{ member.callWord }}</td>
+            <td class="hidden">{{ member.id }}</td>
+            
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<table class="table table-bordered table-condensed table-striped table-hover">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Call Word</th>
+        <th>Time Zone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="member in members" ng-click="edit(member.$id())">
+        <!--<td><gravatar email="user.email" size="50" default-image="'monsterid'"></gravatar></td>-->
+        <td>{{member.name}}</td>
+        <td>{{member.callWord}}</td>
+        <td>{{member.time_zone}}</td>
+        <td><button class="btn btn-danger remove" ng-click="remove(member, $index, $event)">Remove</button></td>
+    </tr>
+    </tbody>
+</table>
+<div class="well">
+    <button class="btn" ng-click="new()">New Member</button>
+</div>

@@ -1,0 +1,29 @@
+<p>Crew Member Details</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <!--<th><input type="checkbox" ng-model="toggle" ng-click="toggleSelectAll()" /> Action</th>-->
+            <th>Name</th>
+            <th>Clan</th>
+            <th>Class</th>
+            <th class="hidden">ID</th>
+            <th>Level</th>
+            <th>BDH Role</th>
+            <th>Forge Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="member_detail in member_details">
+            <!--<td><input type="checkbox" ng-model="member.Checked" /></td>-->
+            <td>{{member_detail.name}}</td>
+            <td>{{member_detail.clan}}</td>
+            <td>{{member_detail.class}}</td>            
+            <td class="hidden">{{member_detail.id}}</td>
+            <td>{{member_detail.level}}</td>
+            <td>{{member_detail.bdh_role}}</td>
+            <td>{{member_detail.forge_group}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
